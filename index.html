@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <link rel="import" href="favicons.html" >
+    <title>Degrees to Hitler</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="alt">
+        <div class="inner">
+            <h1>Degrees to Hitler</h1>
+        </div>
+    </header>
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+        <!-- Banner -->
+            <section id="intro" class="main">
+                <span class="icon fa-wikipedia-w major"></span>
+                <h2>The Six Degrees of Hitler</h2>
+                <p>Ever heard the theory that every article on wikipedia
+                can be linked back to Hitler in six clicks?<br> Put that theory to the test! Search for an article and see the path <br>that will connect it to Hitler.</p>
+            </section>
+
+        <!-- Items -->
+            <section id="main" class="main">
+
+            <h4 style="text-align: left;margin-left:5em;">Find an Article!</h4>
+            <input id="articlesearch" onkeyup="getResults(value);" type="text" name="FirstArticle" autocomplete="off">
+            <div id="searchresults"></div>
+            </section>
+
+        <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+            </footer>
+
+        </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

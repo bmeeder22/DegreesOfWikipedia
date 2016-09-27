@@ -1,0 +1,32 @@
+#DIJAKSTRA
+MATCH (from:Page {title:"Adolf Hitler"}), (to:Page {title:"usa"}) ,
+path = shortestPath((from)-[:Link*]->(to))
+RETURN path
+
+#CREATE NEW NODE WITH RELATIONSHIP FROM PAST NODE
+MATCH (anchorPage:Page {title:"title"})
+CREATE (newPage:Page { title:"title",url:"url" })
+CREATE (anchorPage)-[l:Link]->(newPage)
+RETURN anchorPage,l,newPage
+
+#CREATE BASE NODE
+CREATE (:Page {title:"title", url:"url"})
+
+#recursion create
+function(Page p) {
+	List = p.getLinks();
+
+	if(List.length == 0) {
+		return;
+	}
+
+	foreach(Page linked in List) {
+		if(page exists) {
+			//create link between p and linked
+		}
+		else {
+			//create Node for linked and link p and linked
+			function(linked);
+		}
+	}
+}

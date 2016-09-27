@@ -1,0 +1,10 @@
+{
+    "name": "bmeeder/degreestohitler",
+    "description": "app to find shortest wikipedia path",
+    "type": "app",
+    "require": {
+        "graphaware/neo4j-php-client": "^4.0"
+    },
+    "license": "undefined",
+    "minimum-stability": "dev"
+}
