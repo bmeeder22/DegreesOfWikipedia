@@ -1241,6 +1241,13 @@
 		padding: 4em 0 2em 0;
 	}
 
+	#cards {
+		width: 64em;
+		margin: 0 auto;
+		max-width: calc(100% - 4em);
+		padding: 4em 0 2em 0;
+	}
+
 		#wrapper > .main {
 			margin-bottom: 4em;
 		}
@@ -1496,6 +1503,11 @@
 /* CTA */
 
 	#cta {
+		padding: 2em 0 0.1em 0;
+		text-align: center;
+	}
+
+	#cta2 {
 		padding: 2em 0 0.1em 0;
 		text-align: center;
 	}

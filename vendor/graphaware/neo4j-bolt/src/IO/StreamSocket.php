@@ -58,6 +58,8 @@ class StreamSocket extends AbstractIO
      */
     private $sock;
 
+    private $configuration;
+
     /**
      * @param string               $host
      * @param int                  $port
@@ -65,7 +67,7 @@ class StreamSocket extends AbstractIO
      * @param bool                 $keepAlive
      * @param EventDispatcher|null $eventDispatcher
      */
-    public function __construct($host, $port, $context = null, $keepAlive = false, EventDispatcher $eventDispatcher = null)
+    public function __construct($host, $port, $context = null, $keepAlive = false, EventDispatcher $eventDispatcher = null, Configuration $configuration = null)
     {
         $this->host = $host;
         $this->port = $port;
@@ -75,6 +77,7 @@ class StreamSocket extends AbstractIO
         $this->protocol = 'tcp';
 
         $this->context = null !== $context ? $context : stream_context_create();
+        $this->configuration = $configuration;
 
         /*
         if (is_null($this->context)) {
@@ -97,7 +100,7 @@ class StreamSocket extends AbstractIO
             ]);
         }
 
-        return new self($host, $port, $context, false, $eventDispatcher);
+        return new self($host, $port, $context, false, $eventDispatcher, $configuration);
     }
 
     /**
@@ -206,6 +209,13 @@ class StreamSocket extends AbstractIO
             ));
         }
 
+        if ($this->shouldEnableCrypto()) {
+            $result = stream_socket_enable_crypto($this->sock, true, STREAM_CRYPTO_METHOD_SSLv23_CLIENT);
+            if (true !== $result) {
+                throw new \RuntimeException(sprintf('Unable to enable crypto on socket'));
+            }
+        }
+
         stream_set_read_buffer($this->sock, 0);
 
         return true;
@@ -274,5 +284,14 @@ class StreamSocket extends AbstractIO
         }
 
         return $data;
+    }
+
+    public function shouldEnableCrypto()
+    {
+        if (null !== $this->configuration && $this->configuration->getTlsMode() === Configuration::TLSMODE_REQUIRED) {
+            return true;
+        }
+
+        return false;
     }
 }

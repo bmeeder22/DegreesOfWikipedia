@@ -11,6 +11,7 @@
 namespace GraphAware\Neo4j\Client\Formatter;
 
 use GraphAware\Common\Result\AbstractRecordCursor;
+use GraphAware\Common\Result\Record;
 use GraphAware\Neo4j\Client\Formatter\Type\Node;
 use GraphAware\Neo4j\Client\Formatter\Type\Path;
 use GraphAware\Neo4j\Client\Formatter\Type\Relationship;
@@ -59,7 +60,8 @@ class Result extends AbstractRecordCursor
     }
 
     /**
-     * @return RecordView|null
+     * @return RecordView
+     * @throws \RuntimeException When there is no record
      */
     public function firstRecord()
     {
@@ -67,8 +69,21 @@ class Result extends AbstractRecordCursor
             return $this->records[0];
         }
 
-        return;
+        throw new \RuntimeException('There is no recrods');
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function firstRecordOrDefault($default)
+    {
+        if (0 === $this->size()) {
+            return $default;
+        }
+
+        return $this->firstRecord();
+    }
+
 
     /**
      * @param array $fields
@@ -113,11 +128,16 @@ class Result extends AbstractRecordCursor
     }
 
     /**
-     * @return RecordView|null
+     * @return RecordView
+     * @throws \RuntimeException When there is no records
      */
     public function getRecord()
     {
-        return !empty($this->records) ? $this->records[0] : null;
+        if (!empty($this->records)) {
+            return $this->records[0];
+        }
+
+        throw new \RuntimeException('There is no recrods');
     }
 
     /**

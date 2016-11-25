@@ -1,6 +1,8 @@
 # PHP Enum implementation inspired from SplEnum
 
-[![Build Status](https://travis-ci.org/myclabs/php-enum.png?branch=master)](https://travis-ci.org/myclabs/php-enum) [![Latest Stable Version](https://poser.pugx.org/myclabs/php-enum/version.png)](https://packagist.org/packages/myclabs/php-enum) [![Total Downloads](https://poser.pugx.org/myclabs/php-enum/downloads.png)](https://packagist.org/packages/myclabs/php-enum) [![Code Coverage](https://scrutinizer-ci.com/g/myclabs/php-enum/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/myclabs/php-enum/?branch=master)
+[![Build Status](https://travis-ci.org/myclabs/php-enum.png?branch=master)](https://travis-ci.org/myclabs/php-enum)
+[![Latest Stable Version](https://poser.pugx.org/myclabs/php-enum/version.png)](https://packagist.org/packages/myclabs/php-enum)
+[![Total Downloads](https://poser.pugx.org/myclabs/php-enum/downloads.png)](https://packagist.org/packages/myclabs/php-enum)
 
 ## Why?
 
@@ -15,6 +17,11 @@ Using an enum instead of class constants provides the following advantages:
 
 This Enum class is not intended to replace class constants, but only to be used when it makes sense.
 
+## Installation
+
+```
+composer require myclabs/php-enum
+```
 
 ## Declaration
 
@@ -57,6 +64,7 @@ function setAction(Action $action) {
 - `__toString()` You can `echo $myValue`, it will display the enum value (value of the constant)
 - `getValue()` Returns the current value of the enum
 - `getKey()` Returns the key of the current value on Enum
+- `equals()` Tests whether enum instances are equal (returns `true` if enum values are equal, `false` otherwise)
 
 Static methods:
 
@@ -111,10 +119,4 @@ class Action extends Enum
     const VIEW = 'view';
     const EDIT = 'edit';
 }
-```
-
-## Installation
-
-```
-composer require myclabs/php-enum
 ```
