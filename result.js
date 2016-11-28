@@ -16,12 +16,21 @@ function main() {
         success: function (data) {
             var input = JSON.parse(data);
             console.log(input);
+            $(".spinner").remove();
+
+            if(data.length == 0) {
+                $('#cta').after('<section id="intro" class="main"><h2>No Path Found!</h2></section>');
+            }
 
             var pathCards = [];
             for(var i = input.length-1; i>-1; i--) {
                 var nodeTitle = input[i];
                 pathCards.push(new PathCard(nodeTitle));
             }
+        },
+        error: function() {
+            $(".spinner").remove();
+            $('#cta').after('<section id="intro" class="main"><h2>Error no article found<br>Try new search</h2></section>');
         }
     });
 }
