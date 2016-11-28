@@ -15,11 +15,11 @@ function main() {
         data: {title:title},
         success: function (data) {
             var input = JSON.parse(data);
-            console.log(input);
             $(".spinner").remove();
 
-            if(data.length == 0) {
+            if(input.length == 0) {
                 $('#cta').after('<section id="intro" class="main"><h2>No Path Found!</h2></section>');
+                return;
             }
 
             var pathCards = [];
