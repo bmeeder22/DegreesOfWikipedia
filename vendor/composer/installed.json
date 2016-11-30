@@ -6,12 +6,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/event-dispatcher.git",
-            "reference": "f6118190787912bc15de082ee9664eb0876a5b8b"
+            "reference": "b0cabf5e9315afda50ce44d17580472d8d55ce0d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/f6118190787912bc15de082ee9664eb0876a5b8b",
-            "reference": "f6118190787912bc15de082ee9664eb0876a5b8b",
+            "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b0cabf5e9315afda50ce44d17580472d8d55ce0d",
+            "reference": "b0cabf5e9315afda50ce44d17580472d8d55ce0d",
             "shasum": ""
         },
         "require": {
@@ -28,11 +28,11 @@
             "symfony/dependency-injection": "",
             "symfony/http-kernel": ""
         },
-        "time": "2016-09-20 15:12:39",
+        "time": "2016-11-19 20:35:20",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.2-dev"
+                "dev-master": "3.3-dev"
             }
         },
         "installation-source": "source",
@@ -63,17 +63,17 @@
     },
     {
         "name": "myclabs/php-enum",
-        "version": "1.4.2",
-        "version_normalized": "1.4.2.0",
+        "version": "1.5.0",
+        "version_normalized": "1.5.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/myclabs/php-enum.git",
-            "reference": "e83e992a5b5a0858ef7adbc9239a749d71fb6979"
+            "reference": "e42fa9d2ae5dd660dbd0fb573d94c61e5a0dbb02"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/myclabs/php-enum/zipball/e83e992a5b5a0858ef7adbc9239a749d71fb6979",
-            "reference": "e83e992a5b5a0858ef7adbc9239a749d71fb6979",
+            "url": "https://api.github.com/repos/myclabs/php-enum/zipball/e42fa9d2ae5dd660dbd0fb573d94c61e5a0dbb02",
+            "reference": "e42fa9d2ae5dd660dbd0fb573d94c61e5a0dbb02",
             "shasum": ""
         },
         "require": {
@@ -83,7 +83,7 @@
             "phpunit/phpunit": "4.*",
             "squizlabs/php_codesniffer": "1.*"
         },
-        "time": "2016-08-01 15:48:47",
+        "time": "2016-10-09 21:43:05",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -109,17 +109,17 @@
     },
     {
         "name": "guzzlehttp/promises",
-        "version": "1.2.0",
-        "version_normalized": "1.2.0.0",
+        "version": "1.3.0",
+        "version_normalized": "1.3.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/promises.git",
-            "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579"
+            "reference": "2693c101803ca78b27972d84081d027fca790a1e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/promises/zipball/c10d860e2a9595f8883527fa0021c7da9e65f579",
-            "reference": "c10d860e2a9595f8883527fa0021c7da9e65f579",
+            "url": "https://api.github.com/repos/guzzle/promises/zipball/2693c101803ca78b27972d84081d027fca790a1e",
+            "reference": "2693c101803ca78b27972d84081d027fca790a1e",
             "shasum": ""
         },
         "require": {
@@ -128,7 +128,7 @@
         "require-dev": {
             "phpunit/phpunit": "~4.0"
         },
-        "time": "2016-05-18 16:56:05",
+        "time": "2016-11-18 17:47:58",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -219,12 +219,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/psr7.git",
-            "reference": "64862e854f876bc5aee2996cab2f552db8586065"
+            "reference": "5f17a79615bd36d52d3b3ce44075aec02605d8bf"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/psr7/zipball/64862e854f876bc5aee2996cab2f552db8586065",
-            "reference": "64862e854f876bc5aee2996cab2f552db8586065",
+            "url": "https://api.github.com/repos/guzzle/psr7/zipball/5f17a79615bd36d52d3b3ce44075aec02605d8bf",
+            "reference": "5f17a79615bd36d52d3b3ce44075aec02605d8bf",
             "shasum": ""
         },
         "require": {
@@ -237,7 +237,7 @@
         "require-dev": {
             "phpunit/phpunit": "~4.0"
         },
-        "time": "2016-08-03 09:33:34",
+        "time": "2016-11-02 14:11:11",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -286,12 +286,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/guzzle.git",
-            "reference": "a0d75173c8553b4281c8319333d9ee90e4656ed1"
+            "reference": "471026d23a14f6eadd0147eb5697f48ebe6adec8"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/a0d75173c8553b4281c8319333d9ee90e4656ed1",
-            "reference": "a0d75173c8553b4281c8319333d9ee90e4656ed1",
+            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/471026d23a14f6eadd0147eb5697f48ebe6adec8",
+            "reference": "471026d23a14f6eadd0147eb5697f48ebe6adec8",
             "shasum": ""
         },
         "require": {
@@ -304,7 +304,7 @@
             "phpunit/phpunit": "^4.0",
             "psr/log": "^1.0"
         },
-        "time": "2016-09-22 14:23:55",
+        "time": "2016-11-15 18:22:40",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -345,17 +345,17 @@
     },
     {
         "name": "graphaware/neo4j-common",
-        "version": "3.2.1",
-        "version_normalized": "3.2.1.0",
+        "version": "3.3.0",
+        "version_normalized": "3.3.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/graphaware/neo4j-php-commons.git",
-            "reference": "bd731f43ba2f2d181ee6d770a91a3585a3f1d3b0"
+            "reference": "02e7bc40eaaaf3e920c315e64cf6a16653b36a96"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/graphaware/neo4j-php-commons/zipball/bd731f43ba2f2d181ee6d770a91a3585a3f1d3b0",
-            "reference": "bd731f43ba2f2d181ee6d770a91a3585a3f1d3b0",
+            "url": "https://api.github.com/repos/graphaware/neo4j-php-commons/zipball/02e7bc40eaaaf3e920c315e64cf6a16653b36a96",
+            "reference": "02e7bc40eaaaf3e920c315e64cf6a16653b36a96",
             "shasum": ""
         },
         "require": {
@@ -364,7 +364,7 @@
         "require-dev": {
             "phpunit/phpunit": "^4.0"
         },
-        "time": "2016-06-13 09:51:10",
+        "time": "2016-10-16 16:36:13",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -393,17 +393,17 @@
     },
     {
         "name": "graphaware/neo4j-bolt",
-        "version": "1.6.1",
-        "version_normalized": "1.6.1.0",
+        "version": "1.8.0",
+        "version_normalized": "1.8.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/graphaware/neo4j-bolt-php.git",
-            "reference": "f6c3331d7c7fe6adeaac3e375f4b34152fac144e"
+            "reference": "1470f24967a399466edfea49e340df3950bd1c04"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/graphaware/neo4j-bolt-php/zipball/f6c3331d7c7fe6adeaac3e375f4b34152fac144e",
-            "reference": "f6c3331d7c7fe6adeaac3e375f4b34152fac144e",
+            "url": "https://api.github.com/repos/graphaware/neo4j-bolt-php/zipball/1470f24967a399466edfea49e340df3950bd1c04",
+            "reference": "1470f24967a399466edfea49e340df3950bd1c04",
             "shasum": ""
         },
         "require": {
@@ -419,7 +419,7 @@
             "phpunit/phpunit": "^4.8",
             "symfony/stopwatch": "^2.7"
         },
-        "time": "2016-08-26 23:32:49",
+        "time": "2016-10-16 16:42:03",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -441,17 +441,17 @@
     },
     {
         "name": "graphaware/neo4j-php-client",
-        "version": "4.5.5",
-        "version_normalized": "4.5.5.0",
+        "version": "4.6.3",
+        "version_normalized": "4.6.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/graphaware/neo4j-php-client.git",
-            "reference": "fe296bc5866cc1725a679b857f74c566b1948b55"
+            "reference": "db5580df3613f63a0b30dd72274d52d6b6da49e3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/graphaware/neo4j-php-client/zipball/fe296bc5866cc1725a679b857f74c566b1948b55",
-            "reference": "fe296bc5866cc1725a679b857f74c566b1948b55",
+            "url": "https://api.github.com/repos/graphaware/neo4j-php-client/zipball/db5580df3613f63a0b30dd72274d52d6b6da49e3",
+            "reference": "db5580df3613f63a0b30dd72274d52d6b6da49e3",
             "shasum": ""
         },
         "require": {
@@ -467,7 +467,7 @@
             "phpunit/phpunit": "4.*",
             "symfony/stopwatch": "^3.0"
         },
-        "time": "2016-09-19 04:58:41",
+        "time": "2016-10-16 16:50:59",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

@@ -1,12 +1,15 @@
-var renderResults = function(list, titles, urls) {
+var renderResults = function(listNode, titles, urls) {
     for(var i = 0; i<titles.length; i++) {
         var listItem = document.createElement('li');
-        listItem.style = "list-style: none;margin: 1em 0;padding: 0;";
         var link = document.createElement('a');
+
+        listItem.style = "list-style: none;margin: 1em 0;padding: 0;";
+
         listItem.appendChild(link);
         link.innerHTML=titles[i];
-        link.href = updateURL(urls[i]);
-        list.appendChild(listItem);
+        link.href = 'result.html?title=' + titles[i];
+
+        listNode.appendChild(listItem);
     }
 };
 
@@ -34,14 +37,18 @@ var getResults = function(value) {
         dataType: "jsonp",
         success: function (data) {
             console.log(data);
+
+            var results = data[1];
+            var links = data[3];
+
             var resultsDomNode = document.getElementById('searchresults');
 
             clearList(resultsDomNode);
 
-            var list = document.createElement('ul');
-            resultsDomNode.appendChild(list);
+            var listNode = document.createElement('ul');
+            resultsDomNode.appendChild(listNode);
 
-            renderResults(list, data[1], data[3]);
+            renderResults(listNode, results, links);
         }
 	});
 };

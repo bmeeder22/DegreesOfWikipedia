@@ -74,6 +74,18 @@ abstract class Enum
     }
 
     /**
+     * Compares one Enum with another.
+     *
+     * This method is final, for more information read https://github.com/myclabs/php-enum/issues/4
+     *
+     * @return bool True if Enums are equal, false if not equal
+     */
+    final public function equals(Enum $enum)
+    {
+        return $this->getValue() === $enum->getValue();
+    }
+
+    /**
      * Returns the names (keys) of all constants in the Enum class
      *
      * @return array
